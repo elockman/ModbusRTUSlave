@@ -12,6 +12,7 @@ class ModbusRTUSlave : public ModbusSlaveLogic {
     void setResponseDelay(unsigned long responseDelay);
     void begin(uint8_t localUnitId, unsigned long baud, uint32_t config = SERIAL_8N1);
     bool poll();
+    void setID(uint8_t localUnitId);
 
   private:
     ModbusRTUComm _rtuComm;
