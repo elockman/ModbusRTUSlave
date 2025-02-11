@@ -27,6 +27,6 @@ bool ModbusRTUSlave::poll() {
   return true;
 }
 
-void setID(uint8_t localUnitId);
+void ModbusRTUSlave::setID(uint8_t localUnitId) {
   if (localUnitId >= 1 && localUnitId <= 247) _localUnitId = localUnitId;
 }
